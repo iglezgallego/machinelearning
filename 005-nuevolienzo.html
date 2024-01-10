@@ -71,7 +71,7 @@
                     
                     //Recorro esta imagen para detectar que pixeles son verticales
                     let muestravertical = contextovertical.getImageData(0,0,8,8)
-                    //Para cada uno de los pixeles en horizontal
+                    //Para cada uno de los pixeles en vertical
                     for(let x= 0;x<512;x++){
                         //en vertical
                         for(let y= 0;y<512;y++){
@@ -83,7 +83,7 @@
                                 suma += Math.abs(trozo.data[i] - muestravertical.data[i])
                             }
                             //si la suma es 
-                            if(suma < 3000){
+                            if(suma < 2000){
                                 //en ese caso pinta 
                                 contexto3.fillRect(x,y,2,2)
                             }
